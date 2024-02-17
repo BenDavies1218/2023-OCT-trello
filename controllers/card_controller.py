@@ -2,9 +2,9 @@ from flask import Blueprint, request
 from datetime import date
 from init import db
 from flask_jwt_extended import jwt_required, get_jwt_identity
+from models.card import Card, cards_schema, card_schema
 
 cards_bp = Blueprint("cards", __name__, url_prefix="/cards")
-from models.card import Card, cards_schema, card_schema
 
 
 @cards_bp.route("/")
